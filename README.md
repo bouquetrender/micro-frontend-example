@@ -1,0 +1,15 @@
+# micro-app-example
+
+![img](https://github.com/bouquetrender/micro-frontend-example/assets/16361069/6f7dce72-0cbd-41ad-8583-8ed1ce1b6624)
+
+简易微前端逻辑实现
+
+### 主应用
+- index.js 实现缝合层基座逻辑
+- app.js 使用 api 创建多个 app 子应用
+- sandbox.js 实现沙箱
+
+### 子应用
+- 处理 webpack umd 修改
+- 入口文件 mount 和 unmout 逻辑实现
+
