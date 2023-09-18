@@ -2,7 +2,7 @@
 
 ![img](https://github.com/bouquetrender/micro-frontend-example/assets/16361069/6f7dce72-0cbd-41ad-8583-8ed1ce1b6624)
 
-简易微前端逻辑实现
+简易微前端逻辑实现，主应用基座负责不同子应用的挂载与销毁，利用 with 和 proxy 处理沙箱。
 
 ### 主应用
 - index.js 实现缝合层基座逻辑
