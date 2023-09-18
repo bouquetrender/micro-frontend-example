@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro App Source</title>
+  </head>
+  <body>
+    <div>Main Page</div>
+    <button id="home">Home</button>
+    <button id="vue">Vue Component</button>
+    <button id="react">React Component</button>
+
+    <div id="MICRO_CONTAINER">
+    </div>
+
+    <script type="module">
+      import { createLayer } from "./index.js";
+
+      const layer = createLayer();
+
+      layer.registerMicroApps([
+        {
+          name: "react-project",
+          entry: ["//192.168.31.65:3000/static/js/bundle.js"],
+          container: "#MICRO_CONTAINER",
+          isActive: () => window.location.pathname.includes("/react"),
+        },
+        {
+          name: "vue-project",
+          entry: [
+            "//192.168.31.65:8081/js/chunk-vendors.js",
+            "//192.168.31.65:8081/js/app.js",
+          ],
+          publicPath: "//192.168.31.65:8081/",
+          container: "#MICRO_CONTAINER",
+          isActive: () => window.location.pathname.includes("/vue"),
+        },
+      ]);
+
+      // layer.start();
+      console.log(layer);
+
+      document.querySelector("#home").addEventListener("click", () => {
+        history.pushState("", null, "/");
+        layer.start();
+      });
+
+      document.querySelector("#vue").addEventListener("click", () => {
+        history.pushState("", null, "/vue");
+        layer.start();
+      });
+
+      document.querySelector("#react").addEventListener("click", () => {
+        history.pushState("", null, "/react");
+        layer.start();
+      });
+    </script>
+  </body>
+</html>
