@@ -1,6 +1,6 @@
 # micro-app-example
 
-![img](https://github.com/bouquetrender/micro-frontend-example/assets/16361069/6f7dce72-0cbd-41ad-8583-8ed1ce1b6624)
+![img](https://github.com/bouquetrender/micro-frontend-example/assets/16361069/3866bbd1-6ff3-4a1e-97e6-231048375386)
 
 简易微前端逻辑实现，主应用基座负责不同子应用的挂载与销毁，利用 with 和 proxy 处理沙箱。
 
